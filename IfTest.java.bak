@@ -122,13 +122,14 @@ class  IfTest {
 		double humanAge = 0;
 		if (dogAge < 0){
 			System.out.println("Invalid Input");
-		}else if (dogAge < 3){
-			humanAge = 10.5 * dogAge;
 		}else{
-			humanAge = 10.5 * 2.0 + (4.0 * (dogAge - 2.0));
-		}
+			if (dogAge < 3){
+				humanAge = 10.5 * dogAge;
+			}else{
+				humanAge = 10.5 * 2.0 + (4.0 * (dogAge - 2.0));
+			}
 			System.out.println(humanAge);
-
+		}
 
 
 

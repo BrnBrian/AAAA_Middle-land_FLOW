@@ -109,7 +109,7 @@ class  IfTest {
 
 		double num6 = 15.3;
 		double num7 = 6.55;
-		if (num6 > 10.0 & num7 < 20.0){
+		if (num6 > 10.0 && num7 < 20.0){
 			System.out.println("dd=" + (num6 + num7));
 		}else{
 			System.out.println(num6*num7);

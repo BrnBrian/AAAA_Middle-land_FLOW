@@ -3,11 +3,12 @@
 
 
 
-
+import java.util.Scanner;
 
 class  IfTest {
 	public static void main(String[] args) {
 
+		Scanner scan = new Scanner(System.in);
 
 		//Example 1:
 		int heartBeats = 79;
@@ -42,12 +43,14 @@ class  IfTest {
 
 		//Example 4:
 
-		int ypScore = 60;
+		System.out.println("Enter ypScore score, 0-100");
+		int ypScore = scan.nextInt();
+
 		if (ypScore == 100){
 			System.out.println("ybq will give yp a BMW as a gift.");
-		}else if(ypScore < 100 & ypScore > 80){
+		}else if(ypScore > 80){
 			System.out.println("ybq will give yp a IPhone xs Max as a gift.");
-		}else if(ypScore <= 80 & ypScore >= 60){
+		}else if(ypScore >= 60){
 			System.out.println("ybq will give yp a IPad as a gift.");
 		}else{
 			System.out.println("ybq will give a shit");
@@ -57,9 +60,34 @@ class  IfTest {
 		//Example 5:
 
         //answer1:
-		int num1 = 450;
-		int num2 = 33;
-		int num3 = 4550;
+		System.out.println("Enter 1st number");
+		int num1 = scan.nextInt();
+
+		System.out.println("Enter 2nd number");
+		int num2 = scan.nextInt();
+
+		System.out.println("Enter 3rd number");
+		int num3 = scan.nextInt();
+
+
+		if(num1 >= num2){
+			if(num2 >= num3){
+				System.out.println(num3 + "<=" + num2 + "<=" + num1);
+			}else if(num1 <= num3){
+				System.out.println(num2 + "<=" + num1 + "<=" + num3);
+			}else{
+				System.out.println(num2 + "<=" + num3 + "<=" + num1);
+			}
+
+		}else{
+			if(num3 >= num2){
+				System.out.println(num1 + "<=" + num2 + "<=" + num3);
+			}else if(num3 >= num1){
+				System.out.println(num1 + "<=" + num3 + "<=" + num2);
+			}else{
+				System.out.println(num3 + "<=" + num1 + "<=" + num2);
+		}
+		/* dummy answer
 		if (num1 >= num2 & num2 >= num3){
 			System.out.println(num3 + "<=" + num2 + "<=" + num1);
 		}else if(num1 >= num3 & num2 <= num3){
@@ -73,6 +101,7 @@ class  IfTest {
 		}else{
 			System.out.println(num2 + "<=" + num1 + "<=" + num3);
 		}
+		*/
 
 		int x = 4;
         int y = 1;
@@ -131,7 +160,6 @@ class  IfTest {
 			System.out.println(humanAge);
 		}
 
-
-
+	}
 	}
 }
